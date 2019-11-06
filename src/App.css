@@ -1,22 +1,93 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #ccc;
+}
+
 .container {
     background-color: #c00025;
     width: 100%;
-    max-width: 550px;
-    border-radius: 15px;
-    border: 2px solid grey;
-    padding-bottom: 25px;
+    max-width: 470px;
+    margin: 48px auto;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px #646262;
 }
 .display {
-    margin-top: 25px;
-    height: 100px;
-    width: 450px;
-    border-radius: 50px;
-    color: white;
-    background-color: #322c2d;
-    box-shadow: 1px 1px #322c2d;
+	align-items: flex-end;
+	background-color: #322c2d;
+	border-radius: 50px;
+	box-shadow: 1px 1px #322c2d;
+	color: white;
+	display: flex;
+	font-size: 3.2rem;
+	height: 100px;
+	justify-content: flex-end;
+	line-height: 100px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	overflow: hidden;
+	padding: 0 8%;
+	text-align: right;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0 3px 0 #00000080;
+	color: #fff;
+	cursor: pointer;
+	flex-basis: 80px;
+	font-size: 2rem;
+	height: 80px;
+	line-height: 80px;
+	margin-top: 12px;
+  outline: none;
+	text-align: center;
+  transition: all 0.1s ease-in-out;
+	width: 80px;
+}
+
+.numbers, .specials, .operators {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  button.bigButton {
+    width: 190px;
+    flex-basis: 185px;
+    border-radius: 80px;
+  }
+
+  .operators {
     justify-content: flex-end;
-    align-items: flex-end;
-    padding-right: 8%;
-    font-size: 5.0rem;
+  }
+  
+  .numbers button {
+      background-color: #304179;
+  }
+  
+  .operators button {
+      background-color: #3888a3;
+  }
+  
+  .specials button {
+      background-color: #3f5d9c;
+  }
+  
+  button:active {
+      box-shadow: none;
+      transform: translateY(3px);
   }
